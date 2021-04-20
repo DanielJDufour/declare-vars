@@ -1,0 +1,37 @@
+{
+  "name": "declare-vars",
+  "version": "0.0.0",
+  "description": "Programmatically Generate Variable Declaration Code",
+  "main": "declare-vars.js",
+  "files": [
+    "declare-vars.js"
+  ],
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanielJDufour/declare-vars.git"
+  },
+  "keywords": [
+    "assignment",
+    "const",
+    "declare",
+    "declaration",
+    "strings",
+    "var",
+    "variables"
+  ],
+  "author": "Daniel J. Dufour",
+  "license": "CC0-1.0",
+  "bugs": {
+    "url": "https://github.com/DanielJDufour/declare-vars/issues"
+  },
+  "homepage": "https://github.com/DanielJDufour/declare-vars#readme",
+  "dependencies": {
+    "min-quote": "*"
+  },
+  "devDependencies": {
+    "flug": "*"
+  }
+}
