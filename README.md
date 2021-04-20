@@ -16,6 +16,16 @@ const code = declareVars({ vars });
 // code is "const A=1,B=2;"
 ```
 
+# declaring expressions
+If you want to declare a variable as the result of an expression, set raw to true.
+```js
+const declareVars = require("declare-vars");
+
+const vars = [ { name: 'A', value: 1 }, { name: 'B', value: 'A+2', raw: true }];
+const code = declareVars({ vars });
+// code is "const A=1,B=A+2;"
+```
+
 # toggling semi-colon
 You can skip adding a semi-colon to the end of the declaration by setting semi to false
 ```js

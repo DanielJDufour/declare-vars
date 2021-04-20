@@ -21,6 +21,12 @@ test("comment", ({ eq }) => {
 
 test("pretty", ({ eq }) => {
   const vars = [ { name: 'A', value: 'Apple' }, { name: 'B', value: 'Bear Corn' }, { name: 'C', value: "Cactus" } ];
-  const code = declareVars({ vars, pretty: true});
+  const code = declareVars({ vars, pretty: true });
   eq(code, "const A='Apple';\nconst B='Bear Corn';\nconst C='Cactus';");
+});
+
+test("expressions", ({ eq }) => {
+  const vars = [ { name: 'A', value: 1 }, { name: 'B', value: 'A+2', raw: true }];
+  const code = declareVars({ vars });
+  eq(code, "const A=1,B=A+2;");
 });
