@@ -36,7 +36,7 @@ const vars = [
   { name: 'B', value: 'Bear Corn' },
   { name: 'C', value: "Cactus" }
 ];
-const code = declareVars({ vars, pretty: true});
+const code = declareVars({ vars, pretty: true });
 ```
 code will be the following string value:
 ```
