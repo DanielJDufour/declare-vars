@@ -19,6 +19,12 @@ test("comment", ({ eq }) => {
   eq(code, "/* declarations */\nconst A=1,B=2;");
 });
 
+test("custom comment", ({ eq }) => {
+  const vars = [ { name: 'A', value: 1 }, { name: 'B', value: 2 } ];
+  const code = declareVars({ vars, comment: 'test comment' });
+  eq(code, "/* test comment */\nconst A=1,B=2;");
+});
+
 test("pretty", ({ eq }) => {
   const vars = [ { name: 'A', value: 'Apple' }, { name: 'B', value: 'Bear Corn' }, { name: 'C', value: "Cactus" } ];
   const code = declareVars({ vars, pretty: true });

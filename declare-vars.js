@@ -2,7 +2,7 @@ const minQuote = require("min-quote");
 
 const declareVars = ({ vars, comment=false, pretty=false, semi=true }) => {
   let out = "";
-  if (comment) out += "/* declarations */\n";
+  if (comment) out += "/* " + (typeof comment === "string" ? comment : "declarations") + " */\n";
   if (!pretty) out += "const ";
   vars.forEach(({ name, value, raw=false }, i) => {
     if (pretty) {
